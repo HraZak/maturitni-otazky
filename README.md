@@ -1,5 +1,18 @@
 # Maturitní otázky
 
+## Pravidla
+
+### Pojmenování složek)
+
+- *kategorie*-*číslo*
+- např. spolecne-5
+
+### Struktura
+
+- images/
+    - ...
+- index.html
+
 ## Templates
 
 ### Nová stránka
@@ -19,6 +32,7 @@
 
 <body>
     <div class="container">
+        <h1>...</h1>
         ...
     </div>
 
