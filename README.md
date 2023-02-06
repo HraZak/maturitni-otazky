@@ -51,7 +51,9 @@
 ### Tabulky
 
 ```HTML
-<table class="table table-striped table-sm">
-    ...
+<table class="table table-striped table-sm align-middle">
+    <tbody class="table-group-divider">
+        ...
+    </tbody>
 </table>
 ```
