@@ -12,123 +12,141 @@
 
 <body>
     <div class="container">
-        <h1>3. Instalace, konfigurace a správa operačního systému</h1>
+        <h1 class="my-3">3. Instalace, konfigurace a správa operačního systému</h1>
 
-        <h2>Vysvětlete význam členění disků na oddíly</h2>
-        <ul>
-            <li>Více OS</li>
-            <li>Zrychlení OS na HDD</li>
-        </ul>
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Vysvětlete význam členění disků na oddíly</h2>
+            <ul>
+                <li>Více OS</li>
+                <li>Zrychlení OS na HDD</li>
+            </ul>
+        </div>
 
-        <ul>
-            <li>Klastr</li>
-            <li>Segment</li>
-            <li>Hlava cilindr sektor</li>
-            <li>Oddíly
-                <ul>
-                    <li>Rozdělení fyzického disku na více virtuálních</li>
-                    <li>Partion table
-                        <ul>
-                            <li>Určuje počet a umístění oddílů</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <ul>
+                <li>Klastr</li>
+                <li>Segment</li>
+                <li>Hlava cilindr sektor</li>
+                <li>Oddíly
+                    <ul>
+                        <li>Rozdělení fyzického disku na více virtuálních</li>
+                        <li>Partion table
+                            <ul>
+                                <li>Určuje počet a umístění oddílů</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-        <h2>Image vs. Záloha</h2>
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Image vs. Záloha</h2>
 
-        <h3>Image</h3>
-        <ul>
-            <li>Bitová kopie</li>
-            <li>Např. instalačka OS</li>
-        </ul>
+            <h3>Image</h3>
+            <ul>
+                <li>Bitová kopie</li>
+                <li>Např. instalačka OS</li>
+            </ul>
 
-        <h3>Záloha</h3>
-        <ul>
-            <li>Typy:
-                <ul>
-                    <li>Plná</li>
-                    <li>Částečná</li>
-                    <li>Rozdílová - Cloud</li>
-                    <li>Přírustková - doplní se co chybí</li>
-                    <li>Bod obnovení - Windows</li>
-                </ul>
-            </li>
-        </ul>
+            <h3>Záloha</h3>
+            <ul>
+                <li>Typy:
+                    <ul>
+                        <li>Plná</li>
+                        <li>Částečná</li>
+                        <li>Rozdílová - Cloud</li>
+                        <li>Přírustková - doplní se co chybí</li>
+                        <li>Bod obnovení - Windows</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-        <h2>Bootování systému</h2>
-        <ul>
-            <li>Hardwarová kontrola systému (self-test)</li>
-            <li>Načtení a start zavaděče
-                <ul>
-                    <li>Zavaděč - pointer, dá oprávnění na rozbalení jádra</li>
-                </ul>
-            </li>
-            <li>Načtení a rozbalení jádra
-                <ul>
-                    <li>Proč komprimovaný?
-                        <ol>
-                            <li>Menší</li>
-                            <li>Při úpravě se naruší integrita</li>
-                        </ol>
-                    </li>
-                </ul>
-            </li>
-            <li>Inicializace jádra, základní detekce HW</li>
-            <li>Spouštění programu
-                <ul>
-                    <li>Linux - init</li>
-                    <li>Windows - spousta EXE souborů (např. FileSystem.exe)</li>
-                </ul>
-            </li>
-            <li>Postupné spouštění různých procesů</li>
-        </ul>
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Bootování systému</h2>
+            <ul>
+                <li>Hardwarová kontrola systému (self-test)</li>
+                <li>Načtení a start zavaděče
+                    <ul>
+                        <li>Zavaděč - pointer, dá oprávnění na rozbalení jádra</li>
+                    </ul>
+                </li>
+                <li>Načtení a rozbalení jádra
+                    <ul>
+                        <li>Proč komprimovaný?
+                            <ol>
+                                <li>Menší</li>
+                                <li>Při úpravě se naruší integrita</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li>Inicializace jádra, základní detekce HW</li>
+                <li>Spouštění programu
+                    <ul>
+                        <li>Linux - init</li>
+                        <li>Windows - spousta EXE souborů (např. FileSystem.exe)</li>
+                    </ul>
+                </li>
+                <li>Postupné spouštění různých procesů</li>
+            </ul>
+        </div>
 
-        <h2>MBR</h2>
-        <ul>
-            <li>Na pevném disku</li>
-            <li>Obsahuje odkaz na zavaděč</li>
-        </ul>
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>MBR</h2>
+            <ul>
+                <li>Na pevném disku</li>
+                <li>Obsahuje odkaz na zavaděč</li>
+            </ul>
+        </div>
 
-        <h2>Subsystem Windows</h2>
-        <ul>
-            <li>WSL
-                <ul>
-                    <li>Mikrokernel Ubuntu</li>
-                    <li>Lxcore -> init -> bash</li>
-                </ul>
-            </li>
-            <li>POSIX
-                <ul>
-                    <li>Standard komunikace mezi aplikacemi</li>
-                </ul>
-            </li>
-            <li>Csrss.exe -> Windows</li>
-        </ul>
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Subsystem Windows</h2>
+            <ul>
+                <li>WSL
+                    <ul>
+                        <li>Mikrokernel Ubuntu</li>
+                        <li>Lxcore -> init -> bash</li>
+                    </ul>
+                </li>
+                <li>POSIX
+                    <ul>
+                        <li>Standard komunikace mezi aplikacemi</li>
+                    </ul>
+                </li>
+                <li>Csrss.exe -> Windows</li>
+            </ul>
+        </div>
 
-        <h2>Typy instalace OS</h2>
-        <ul>
-            <li>Z čeho</li>
-            <li>Co instaluji</li>
-            <li>Jaký má být výstup</li>
-        </ul>
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Typy instalace OS</h2>
+            <ul>
+                <li>Z čeho</li>
+                <li>Co instaluji</li>
+                <li>Jaký má být výstup</li>
+            </ul>
+        </div>
 
-        <h2>Průběh instalace Windows a Linuxu</h2>
-        <ol>
-            <li>Instalace jsou zabalený</li>
-            <li>Rozbalí se</li>
-            <li>Smažou se</li>
-        </ol>
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Průběh instalace Windows a Linuxu</h2>
+            <ol>
+                <li>Instalace jsou zabalený</li>
+                <li>Rozbalí se</li>
+                <li>Smažou se</li>
+            </ol>
+        </div>
 
-        <h2>Co po dokončení instalace OS</h2>
-        <ol>
-            <li>Odinstalace aplikací</li>
-            <li>Aktualizace</li>
-            <li>Analýza služeb</li>
-            <li>Bod obnovy</li>
-            <li>Konfigurace uživatele</li>
-        </ol>
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Co po dokončení instalace OS</h2>
+            <ol>
+                <li>Odinstalace aplikací</li>
+                <li>Aktualizace</li>
+                <li>Analýza služeb</li>
+                <li>Bod obnovy</li>
+                <li>Konfigurace uživatele</li>
+            </ol>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
