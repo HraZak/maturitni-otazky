@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Aktivní a pasivní síťové prvky, typy, parametry, konfigurace</title>
+
+    <meta name="author" content="Vojtěch Žák">
+    <meta name="referrer" content="no-referrer">
+    <meta name="robots" content="noindex,nofollow">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="my-3">6. Aktivní a pasivní síťové prvky, typy, parametry, konfigurace</h1>
+
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Aktivní a pasivní prvky</h2>
+
+            <h3>Pasivní</h3>
+            <ul>
+                <li>Hub, kabel</li>
+            </ul>
+
+            <h3>Aktivní</h3>
+            <ul>
+                <li>Fyzická aktivita</li>
+                <li>Logické služby</li>
+            </ul>
+        </div>
+
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Prvky v modelu</h2>
+            <ul>
+                <li>Aplikační - PC, Firewall</li>
+                <li>Síťová vrstva - Router</li>
+                <li>Síťová rozhraní - Switch, Hub, Bridge</li>
+                <li>Fyzická - Reapeter</li>
+            </ul>
+        </div>
+
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Rozdíl mezi Switch a Hub</h2>
+            <ul>
+                <li>Hub kopíruje všude</li>
+                <li>Switch má logiku</li>
+            </ul>
+        </div>
+
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Broadcast</h2>
+            <ul>
+                <li>Oslovuji všechny v síti</li>
+                <li>FF:FF:FF:FF:FF:FF</li>
+                <li>ARP
+                    <ul>
+                        <li>Spojuje MAC s IP adresou</li>
+                    </ul>
+                </li>
+                <li>Dělí je router</li>
+            </ul>
+        </div>
+
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Kolize</h2>
+            <ul>
+                <li>Srazí se nám signály</li>
+                <li>Switch zabraňuje kolizi</li>
+                <li>Při použití full duplex nevznikají kolize</li>
+            </ul>
+        </div>
+
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Gateway</h2>
+            <ul>
+                <li>Dělí broadcast</li>
+                <li>Bridge pro LAN sítě</li>
+                <li>Komunikační brána</li>
+                <li>Standartní služby - DHCP, DNS, VPN, SSH</li>
+            </ul>
+        </div>
+
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>Firewall</h2>
+            <ul>
+                <li>Způsob ochrany sítě</li>
+                <li>Whitelist - Povolené</li>
+                <li>Blacklist - Zakázané</li>
+                <li>Filtruje:
+                    <ul>
+                        <li>Aplikační - protokoly</li>
+                        <li>Transportní - SSH -> port 22</li>
+                        <li>Síťová - IP -> ACL - přístupové seznamy (IP -> IP př)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+
+</html>
