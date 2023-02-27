@@ -27,7 +27,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 
-    <meta name="author" content="Vojtěch Žák">
     <meta name="referrer" content="no-referrer">
     <meta name="robots" content="noindex,nofollow">
 

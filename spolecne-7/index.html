@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7. TCP/IP, síťové služby a jejich konfigurace</title>
 
-    <meta name="author" content="Vojtěch Žák">
     <meta name="referrer" content="no-referrer">
     <meta name="robots" content="noindex,nofollow">
 
@@ -20,11 +19,10 @@
 
         <div class="my-3 p-3 border rounded shadow-sm">
             <h2>UDP</h2>
-
             <table class="table table-striped table-sm align-middle table-bordered text-center">
                 <thead>
                     <tr>
-                        <th colspan="4">Hlavička</th>
+                        <th colspan="2">Hlavička</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -36,13 +34,19 @@
                         <td>Délka</td>
                         <td>Kontrolní součet</td>
                     </tr>
+                    <tr>
+                        <td colspan="2">Data</td>
+                    </tr>
                 </tbody>
             </table>
+
+            <ul>
+                <li>Délka - Velikost celého packetu</li>
+            </ul>
         </div>
 
         <div class="my-3 p-3 border rounded shadow-sm">
             <h2>TCP</h2>
-
             <table class="table table-striped table-sm align-middle table-bordered text-center">
                 <thead>
                     <tr>
@@ -73,24 +77,60 @@
                     <tr>
                         <td colspan="4">Volby</td>
                     </tr>
+                    <tr>
+                        <td colspan="4">Data</td>
+                    </tr>
                 </tbody>
             </table>
 
             <ul>
+                <li>Potvrzovací číslo - Další očekávané číslo</li>
+                <li>Offset dat - Velikost TCP hlavičky</li>
                 <li>Příznaky (flags) - SYN, FIN, ACK</li>
+                <li>Okénko - Velikost celého packetu</li>
             </ul>
         </div>
 
         <div class="my-3 p-3 border rounded shadow-sm">
             <h2>Porty</h2>
-
             <ul>
                 <li>Kategorie:
                     <ol>
-                        <li>Známé porty - vyhrazené pro nejběžnější služby</li>
-                        <li>Registrované porty - použití portu by se mělo registrovat</li>
-                        <li>Dynamické porty - nejsou pevně přiděleny</li>
+                        <li>Známé porty - 0 až 1023 - vyhrazené pro nejběžnější služby</li>
+                        <li>Registrované porty - 1024 až 49151 - použití portu by se mělo registrovat</li>
+                        <li>Dynamické porty - 49152 až 65535 - nejsou pevně přiděleny</li>
                     </ol>
+                </li>
+                <li>Známé porty:
+                    <ul>
+                        <li>22 - SSH</li>
+                        <li>23 - Telnet</li>
+                        <li>53 - DNS</li>
+                        <li>80 - HTTP</li>
+                        <li>443 - HTTPS</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="my-3 p-3 border rounded shadow-sm">
+            <h2>DHCP</h2>
+            <ul>
+                <li>Typy:
+                    <ul>
+                        <li>IPv4:
+                            <ol>
+                                <li>DHCP</li>
+                            </ol>
+                        </li>
+                        <li>IPv6:
+                            <ol>
+                                <li>DHCPv6</li>
+                                <li>SLAAC - server pošle default gateway a prefix, počítač si dopočítá ip adresu</li>
+                                <li>SLAAC s DHCPv6 - od SLAAC dostane default gateway a prefix, od DHCPv6 dostane IP adresu</li>
+                            </ol>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
