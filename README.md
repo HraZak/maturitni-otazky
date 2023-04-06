@@ -36,7 +36,6 @@
 <body>
     <div>
         <h1></h1>
-        
         <div>
             <h2></h2>
         </div>
