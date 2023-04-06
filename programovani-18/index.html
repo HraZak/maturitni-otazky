@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18. Jazyk SQL</title>
+
+    <meta name="referrer" content="no-referrer">
+    <meta name="robots" content="noindex,nofollow">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <h1>18. Jazyk SQL</h1>
+
+        <div>
+            <h2>SQL</h2>
+            <ul>
+                <li>Structured Query Language</li>
+                <li>Standardizovaný strukturovaný dotazovací jazyk pro relační databáze
+                    <ul>
+                        <li>Zástupci: MySQL, PostgreSQL, ...</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Kategorie</h2>
+            <ul>
+                <li>Data definition language (DDL)
+                    <ul>
+                        <li>Příkazy pro definici dat</li>
+                        <li>CREATE, ALTER, DROP, ...</li>
+                    </ul>
+                </li>
+                <li>Data manipulation language (DML)
+                    <ul>
+                        <li>Příkazy pro manipulaci s daty</li>
+                        <li>SELECT, INSERT INTO, UPDATE, DELETE, ...</li>
+                    </ul>
+                </li>
+                <li>Data control language (DCL)
+                    <ul>
+                        <li>Příkazy pro řízení přístupových práv</li>
+                        <li>GRANT, REVOKE</li>
+                    </ul>
+                </li>
+                <li>Transaction control commands (TCC)
+                    <ul>
+                        <li>Příkazy pro řízení transakcí</li>
+                        <li>START TRANSACTION, COMMIT, ROLLBACK</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>CREATE</h2>
+            <ul>
+                <li>Vytváření databázových objektů</li>
+                <li>Syntaxe pro vytvoření tabulky:
+                    <pre><code>
+CREATE TABLE nazev_tabulky
+    (nazev_sloupce datovy_typ
+        [DEFAULT konstantni_vyraz]
+        [NULL | NOT NULL]
+        [omezeni_pro_sloupce]
+        |[omezeni_pro_tabulku]
+        [,...n]
+    )</code></pre>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>INSERT INTO</h2>
+            <ul>
+                <li>Slouží k vložení nových záznamů</li>
+                <li>Syntaxe:
+                    <ul>
+                        <li>Do všech sloupců - <code>INSERT INTO table_name VALUES (value1, ...);</code></li>
+                        <li>Do konkrétních sloupců - <code>INSERT INTO table_name (column1, ...) VALUES (value1, ...);</code></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>UPDATE</h2>
+            <ul>
+                <li>Slouží k úpravě existujících záznamů</li>
+                <li>Syntaxe: <code>UPDATE table_name SET column1 = value1, ... WHERE condition;</code></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>DELETE</h2>
+            <ul>
+                <li>Slouží k odstranění existujících záznamů</li>
+                <li>Syntaxe: <code>DELETE FROM table_name WHERE condition;</code></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>SELECT</h2>
+            <ul>
+                <li>Slouží k výběru dat</li>
+                <li>Syntaxe: <code>SELECT column1, ... FROM table_name;</code></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>WHERE</h2>
+            <ul>
+                <li>Určuje podmínku vybrání</li>
+                <li>Operátory:
+                    <ul>
+                        <li>Matematické: =, >, >=, ...</li>
+                        <li>LIKE, BETWEEN, IN
+                            <ul>
+                                <li>LIKE - shoda části slova, např.: na začátku</li>
+                            </ul>
+                        </li>
+                        <li>AND, OR, NOT</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>JOINy</h2>
+            <ul>
+                <li>Logické operátory: ON, USING</li>
+            </ul>
+            <h3>JOIN</h3>
+            <ul>
+                <li>Také INNER JOIN</li>
+                <li>Vrací záznamy, kde se hodnoty shodují v obouch tabulkách</li>
+            </ul>
+            <h3>LEFT JOIN</h3>
+            <ul>
+                <li>Také LEFT OUTER JOIN</li>
+                <li>Vrací záznamy všechny záznamy z levé tabulky, a záznamy se shodnými údaji z pravé tabulky</li>
+            </ul>
+            <h3>RIGHT JOIN</h3>
+            <ul>
+                <li>Také RIGHT OUTER JOIN</li>
+                <li>Vrací záznamy všechny záznamy z pravé tabulky, a záznamy se shodnými údaji z levé tabulky</li>
+            </ul>
+            <h3>FULL JOIN</h3>
+            <ul>
+                <li>Také FULL OUTER JOIN</li>
+                <li>Vrací všechny záznamy a spojí ty záznamy, kde se hodnoty shodují</li>
+            </ul>
+            <h3>NATURAL JOIN</h3>
+            <ul>
+                <li>Automaticky vybere porovnávané sloupce podle stejného názvu a datového typu</li>
+                <li>Syntaxe: <code>table1 NATURAL JOIN table2</code></li>
+            </ul>
+            <h3>CROSS JOIN</h3>
+            <ul>
+                <li>Každý záznam je spojen s každým</li>
+                <li>Syntaxe: <code>table1 CROSS JOIN table2</code></li>
+                <li>Příklad: První tabulka má 5 záznamů, druhá 10. Výsledný CROSS JOIN bude mít 5 * 10 = 50 záznamů</li>
+                <li>Na konci může být WHERE</li>
+            </ul>
+            <h3>UNION</h3>
+            <ul>
+                <li>Spojení dvou SELECTů</li>
+                <li>Musí být stejného rozsahu</li>
+                <li>Syntaxe: <code>SELECT City FROM Customers UNION SELECT City FROM Suppliers</code></li>
+                <dl>
+                    <dt>UNION</dt>
+                    <dd>Pouze unikátní záznamy</dd>
+                    <dt>UNION ALL</dt>
+                    <dd>I duplicitní záznamy</dd>
+                </dl>
+            </ul>
+            <h3>INTERSECT</h3>
+            <ul>
+                <li>Vrací pouze společné řádky vrácené dvěma příkazy SELECT</li>
+            </ul>
+            <h3>SELF JOIN</h3>
+            <ul>
+                <li>Sama na sebe</li>
+                <li>Musí se použít alias (AS)</li>
+            </ul>
+            <h3>Hierarchické dotazy</h3>
+            <ul>
+                <li>Dá se použít, pokud tabulka obsahuje hierarchická data</li>
+                <li>START WITH - určuje kořenový řádek</li>
+                <li>CONNECT BY - určuje vztah mezi nadřazenými řádky a podřízenými řádky</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Subselect</h2>
+            <ul>
+                <li>SELECT v SELECTu</li>
+                <li>Umístění: za SELECT, v FROM nebo WHERE</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>GROUP BY</h2>
+            <ul>
+                <li>Seskupení řádků</li>
+                <li>Často se používá s agregačními funkcemi</li>
+                <li>Filtruje se pomocí HAVING</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>ORDER BY</h2>
+            <ul>
+                <li>Řazení</li>
+                <li>Dává se vždy na konec</li>
+                <li>Příklady:
+                    <ul>
+                        <li>ORDER BY <var>name</var> - seřadí vzestupně podle sloupce <var>name</var></li>
+                        <li>ORDER BY 2 DESC, 1 - seřadí podle druhého sestupně, potom podle prvního vzestupně</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Agregační funkce</h2>
+            <ul>
+                <li>COUNT(), MAX(), MIN(), SUM(), AVG(), MEDIAN()</li>
+                <li>Vrací jeden řádek</li>
+                <li>Příklady:
+                    <ul>
+                        <li>COUNT(*) - spočítá všechny záznamy</li>
+                        <li>COUNT(<var>name</var>) - spočítá ty, které nejsou prázdné a nejsou duplicitní</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
