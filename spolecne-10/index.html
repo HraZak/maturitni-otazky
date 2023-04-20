@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. Souborové zdroje v síti, správa dat pomocí NTFS teorie/praxe</title>
+
+    <meta name="referrer" content="no-referrer">
+    <meta name="robots" content="noindex,nofollow">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <h1>10. Souborové zdroje v síti, správa dat pomocí NTFS teorie/praxe</h1>
+
+        <div>
+            <h2>Souborový systém</h2>
+            <ul>
+                <li>Způsob organizace dat</li>
+                <li>Určuje maximální velikost souboru</li>
+                <li>Příklady: NTFS, FAT, exFAT, ext</li>
+                <li>Dědičnost - stejná práva pro soubory ve složce</li>
+                <li>Dává příkazy ovladači zařízení</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Soubor</h2>
+            <ul>
+                <li>Struktura dat</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>NTFS</h2>
+            <ul>
+                <li>Vlastnosti:
+                    <ul>
+                        <li>Žurnálování
+                            <ul>
+                                <li>$lockfile</li>
+                                <li>$mfs
+                                    <ul>
+                                        <li>Master file table</li>
+                                        <li>Tabulka všech záznamů</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>ACL
+                            <ul>
+                                <li>$mft mirr</li>
+                            </ul>
+                        </li>
+                        <li>Komprese</li>
+                        <li>Šifrování</li>
+                        <li>Pevné a symbolické odkazy</li>
+                    </ul>
+                </li>
+                <li>Nevýhody:
+                    <ul>
+                        <li>Velká fragmentace (pomalý s malými soubory)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>VFS</h2>
+            <ul>
+                <li>Součástí Linux Kernelu</li>
+                <li>Virtualizuje souborový systém</li>
+                <li>Zpracovává systémové volání</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
