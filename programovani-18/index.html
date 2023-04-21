@@ -137,31 +137,37 @@ CREATE TABLE nazev_tabulky
             <ul>
                 <li>Logické operátory: ON, USING</li>
             </ul>
+
             <h3>JOIN</h3>
             <ul>
                 <li>Také INNER JOIN</li>
                 <li>Vrací záznamy, kde se hodnoty shodují v obouch tabulkách</li>
             </ul>
+
             <h3>LEFT JOIN</h3>
             <ul>
                 <li>Také LEFT OUTER JOIN</li>
                 <li>Vrací záznamy všechny záznamy z levé tabulky, a záznamy se shodnými údaji z pravé tabulky</li>
             </ul>
+
             <h3>RIGHT JOIN</h3>
             <ul>
                 <li>Také RIGHT OUTER JOIN</li>
                 <li>Vrací záznamy všechny záznamy z pravé tabulky, a záznamy se shodnými údaji z levé tabulky</li>
             </ul>
+
             <h3>FULL JOIN</h3>
             <ul>
                 <li>Také FULL OUTER JOIN</li>
                 <li>Vrací všechny záznamy a spojí ty záznamy, kde se hodnoty shodují</li>
             </ul>
+
             <h3>NATURAL JOIN</h3>
             <ul>
                 <li>Automaticky vybere porovnávané sloupce podle stejného názvu a datového typu</li>
                 <li>Syntaxe: <code>table1 NATURAL JOIN table2</code></li>
             </ul>
+
             <h3>CROSS JOIN</h3>
             <ul>
                 <li>Každý záznam je spojen s každým</li>
@@ -169,6 +175,7 @@ CREATE TABLE nazev_tabulky
                 <li>Příklad: První tabulka má 5 záznamů, druhá 10. Výsledný CROSS JOIN bude mít 5 * 10 = 50 záznamů</li>
                 <li>Na konci může být WHERE</li>
             </ul>
+
             <h3>UNION</h3>
             <ul>
                 <li>Spojení dvou SELECTů</li>
@@ -181,15 +188,18 @@ CREATE TABLE nazev_tabulky
                     <dd>I duplicitní záznamy</dd>
                 </dl>
             </ul>
+
             <h3>INTERSECT</h3>
             <ul>
                 <li>Vrací pouze společné řádky vrácené dvěma příkazy SELECT</li>
             </ul>
+
             <h3>SELF JOIN</h3>
             <ul>
                 <li>Sama na sebe</li>
                 <li>Musí se použít alias (AS)</li>
             </ul>
+
             <h3>Hierarchické dotazy</h3>
             <ul>
                 <li>Dá se použít, pokud tabulka obsahuje hierarchická data</li>
